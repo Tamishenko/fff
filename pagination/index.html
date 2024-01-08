@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pagination</title>
+    <style>
+        .wrapper {
+            width: fit-content;
+            display: flex;
+            border: darkcyan 1px solid;
+            border-radius: 5px;
+        }
+
+        .wrapper > div {
+            border-right: darkcyan 1px solid;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .previous {
+            color: #475c5e;
+        }
+
+        .next {
+            border: 0 !important;
+        }
+
+        .chosen {
+            background-color: darkcyan;
+            color: white;
+        } 
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="previous" onclick="nextPrevious(false)">Previous</div>
+        <div class="order" onclick="choose(0)">1</div>
+        <div class="order" onclick="choose(1)">2</div>
+        <div class="order" onclick="choose(2)">3</div>
+        <div class="next" onclick="nextPrevious(true)">Next</div>
+    </div>
+
+    <script>
+        let sehifeler = document.getElementsByClassName('order');
+        let index = 0;
+
+        function choose(i) {
+            for (let j = 0; j < sehifeler.length; j++)
+                sehifeler[j].className = 'order';
+
+            index = i;
+            sehifeler[index].className = 'order chosen';
+        }
+
+        function nextPrevious(isNext) {
+            let index2 = index
+            if (isNext) index2 ++;
+            else index2 --;
+
+            if(index2 >= 0 && index2 < sehifeler.length) {
+                for (let j = 0; j < sehifeler.length; j++)
+                    sehifeler[j].className = 'order';
+
+                index = index2;
+                sehifeler[index].className = 'order chosen';
+            }
+        }
+    </script>
+</body>
+</html>

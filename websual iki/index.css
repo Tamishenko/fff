@@ -1,0 +1,33 @@
+/*XARICI GORUNUS GOZELLESDIRME ASAMASININ BASLANGICI*/
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    padding: 10px;
+}
+
+/*XARICI GORUNUS GOZELLESDIRME ASAMASININ SONU (daxili gozelliyimizin saxlanmasi umidiyle saygilar*/
+
+
+
+/*MOUSEDEN XEBERSIZ BUTTONUN MINIMUM RAHATLIGI*/
+.duyme {
+    width: 132px;
+    height: 85px;
+    /*background-repeat: no-repeat;*/
+
+    border: 0;
+    background-color: transparent;
+    background-image: url("https://w3quiz.com/duyme-01.png");
+}
+
+/*MOUSENİ USTUNE GETİRENDE YASANACAQLAR*/
+.duyme:hover {
+    width: 338px;
+    background-image: url("https://w3quiz.com/duyme-02.png");
+}
+
+/*hormetle bu gelecekde hec neyine yaramayacaq front bilgileriyle lenetlenmis hohseyuh*/

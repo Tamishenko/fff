@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    padding: 10px;
+}
+
+/*BURA QEDERİ OPTIONALDIR (qeseng gorunsun deye yazmisam(sizin kimi))*/
+
+#kvadratlar {
+    display: flex;
+    gap: 5px;
+}
+
+/*Seçilməmiş kvadrat*/
+.btn {
+    background-color: transparent;
+    width: 80px;
+    height: 80px;
+    border: black 1px solid;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Seçilmiş kvadrat (sarı)*/
+.btnsari {
+    background-color: yellow;
+    width: 80px;
+    height: 80px;
+    border: black 1px solid;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
